@@ -37,8 +37,7 @@ const LoadingModal = ({ handleResetState }: LoadingModalProps) => {
             <div className="loading-bar"></div>
             <button
               className="pt-8 text-lg font-bold"
-              onClick={handleResetState}
-            >
+              onClick={handleResetState}>
               Cancel
             </button>
           </div>

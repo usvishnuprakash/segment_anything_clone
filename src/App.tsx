@@ -264,6 +264,7 @@ const App = () => {
           output.dims[1],
           output.dims[0]
         );
+
         setSVG(svgStr);
         setMask(output.data);
         // const afterSVG = Date.now();
@@ -277,6 +278,7 @@ const App = () => {
       }
       setClick(null);
       setIsLoading(false);
+
       setIsModelLoaded((prev) => {
         return { ...prev, boxModel: true };
       });

@@ -547,8 +547,7 @@ const Stage = ({
                 window.innerWidth < 768
                   ? { height: "calc(100vh/2" }
                   : { height: canvasHeight }
-              }
-            >
+              }>
               <Canvas
                 konvaRef={konvaRef}
                 annotations={annotations}
@@ -571,13 +570,11 @@ const Stage = ({
                     ? "opacity-100"
                     : "opacity-0 pointer-events-none"
                 }`}
-                id="canvas-overlay"
-              >
+                id="canvas-overlay">
                 <FeatureSummary
                   actions={[{ action: "Demo", actionUrl: "/demo" }]}
                   darkMode
-                  centerAlign
-                >
+                  centerAlign>
                   <h3>Want to keep going?</h3>
                 </FeatureSummary>
               </div>
@@ -608,7 +605,7 @@ const Stage = ({
                 handleSelectedImage={handleSelectedImage}
               />
               <div className="relative flex flex-col items-center md:justify-center flex-1 overflow-hidden md:overflow-visible md:px-12 md:py-9">
-                <div className="absolute top-0 z-30 flex flex-col items-center justify-center w-full md:relative">
+                {/* <div className="absolute top-0 z-30 flex flex-col items-center justify-center w-full md:relative">
                   <MobileOptionNavBar
                     handleResetInteraction={handleResetInteraction}
                     handleUndoInteraction={handleUndoInteraction}
@@ -623,11 +620,10 @@ const Stage = ({
                     annotations={annotations}
                     allText={[allText, setAllText]}
                   />
-                </div>
+                </div> */}
                 <div
                   className="relative w-full h-[calc(100%-6rem)] md:h-full md:my-7"
-                  ref={containerRef}
-                >
+                  ref={containerRef}>
                   <Profiler
                     id="Canvas"
                     onRender={(
@@ -640,8 +636,7 @@ const Stage = ({
                       interactions
                     ) => {
                       // console.log(`${id} took ${actualDuration}ms`);
-                    }}
-                  >
+                    }}>
                     <Canvas
                       konvaRef={konvaRef}
                       annotations={annotations}
@@ -659,12 +654,12 @@ const Stage = ({
                     />
                   </Profiler>
                 </div>
-                <MobileSegmentDrawer
+                {/* <MobileSegmentDrawer
                   handleResetInteraction={handleResetInteraction}
                   handleMagicErase={handleMagicErase}
                   handleCreateSticker={handleCreateSticker}
                   userNegClickBool={[userNegClickBool, setUserNegClickBool]}
-                />
+                /> */}
               </div>
             </div>
           ) : !isToolBarUpload ? (

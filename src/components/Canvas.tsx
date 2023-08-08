@@ -119,6 +119,7 @@ const Canvas = ({
   const annotationsToDraw = [...annotations, ...newAnnotation];
   const positiveClickColor = "turquoise";
   const negativeClickColor = "pink";
+
   const handleClickColor = (num: number) => {
     switch (num) {
       case 0:
@@ -447,6 +448,7 @@ const Canvas = ({
           style={scaledDimensionsStyle}>
           <div className="absolute w-full h-full bg-black pointer-events-none background"></div>
           <img
+            alt=""
             src={image.src}
             className={`absolute w-full h-full pointer-events-none ${
               isLoading ||
@@ -666,6 +668,7 @@ const Canvas = ({
           </Stage>
           {segmentTypes !== "All" && maskImg && !hasClicked && (
             <img
+              alt="mask-image"
               src={maskImg?.src}
               style={{ margin: 0 }}
               className={`absolute top-0 opacity-40 pointer-events-none w-full h-full`}></img>
